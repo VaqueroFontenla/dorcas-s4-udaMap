@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
-import Map from './Components/Map'
+import LMap from './Components/LMap';
 
 
 class UdaMap extends Component {
   render() {
     return (
-      <div className="Map">
-        <Map />
+      <div>
+        <LMap />
       </div>
     );
   }
