@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import { Map, TileLayer, Marker, Popup } from 'react-leaflet';
-import { PopUp } from './styleLMap.js';
+import L from 'leaflet';
+import { PopUp, TitlePopup, TextStyle, Operation, TextStyleBold } from './styleLMap'
+
 
 
 class LMap extends Component {
@@ -11,8 +13,22 @@ class LMap extends Component {
 
   render() {
     const MapStyle = this.props.styles;
+    const data = this.props.data;
     const position = [this.props.coordinates.lat, this.props.coordinates.lon]
     console.log(MapStyle)
+    //const iconMarker = new L.Icon({
+      //iconUrl: require('../../images/poi.png')
+   // })
+
+    let operation;
+    if(data.operation === 0) {
+      operation = 'Rent'
+    } else if (data.operation === 1) {
+      operation = 'Sale'
+    } else {
+      return null;
+    }
+
     return (
       <Map style={MapStyle} center={position} zoom={this.props.coordinates.zoom}>
         <TileLayer
@@ -22,9 +38,24 @@ class LMap extends Component {
         <Marker position={position}>
           <Popup>
             <div style={PopUp}>
-              <span>Dirección<br />
-                <span style={{ display: 'block', textAlign: 'center' }}><b>Precio</b> €</span>
-              </span>
+              <div style={TitlePopup}>
+                <span>Information</span>
+              </div>
+              <div style={{display:'flex', flexDirection:'column', justifyContent:'left'}}>
+                <div>
+                  <span style={TextStyleBold}>Address:  </span>
+                  <span style={TextStyle}>{data.address}</span>
+                </div>
+                <div>
+                  <span style={TextStyleBold}>udaValue:  </span>
+                  <span style={TextStyle}>{data.uDAVALUE}</span>
+                  <span style={TextStyleBold}>  €</span>
+                </div>
+                <div>
+                  <span style={TextStyleBold}>Operation:  </span>
+                  <span style={Operation}>{operation}</span>
+                </div>
+              </div>
             </div>
           </Popup>
         </Marker>
