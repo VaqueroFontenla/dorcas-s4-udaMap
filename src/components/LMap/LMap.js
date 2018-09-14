@@ -4,6 +4,7 @@ import L from 'leaflet';
 import { PopUp, TitlePopup, TextStyle, Operation, TextStyleBold } from './styleLMap'
 
 
+
 class LMap extends Component {
   constructor(props) {
     super(props);
@@ -15,9 +16,9 @@ class LMap extends Component {
     const data = this.props.data;
     const position = [this.props.coordinates.lat, this.props.coordinates.lon]
     console.log(MapStyle)
-    const iconMarker = new L.Icon({
-      iconUrl: require('../../images/poi.png')
-    })
+    //const iconMarker = new L.Icon({
+      //iconUrl: require('../../images/poi.png')
+   // })
 
     let operation;
     if(data.operation === 0) {
@@ -34,7 +35,7 @@ class LMap extends Component {
           attribution="&amp;copy <a href=&quot;http://osm.org/copyright&quot;>OpenStreetMap</a> contributors"
           url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
         />
-        <Marker position={position} icon={iconMarker}>
+        <Marker position={position}>
           <Popup>
             <div style={PopUp}>
               <div style={TitlePopup}>
