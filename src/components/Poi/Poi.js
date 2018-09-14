@@ -5,28 +5,28 @@ import L from 'leaflet';
 export default class Poi extends React.Component {
     setIcon() {
         const myCustomColor = this.props.backgroundPoiColor;
-        let size = parseInt(this.props.size,10);
-        let left = size*-0.5; //Both left and top operations are calculated to put the marker on the same position independently of its size
-        let top = (size + (size-50)) / -2;
+        let size = parseInt(this.props.size, 10);
+        let left = size * -0.5; //Both left and top operations are calculated to put the marker on the same position independently of its size
+        let top = (size + (size - 50)) / -2;
         let number;
-        if(typeof this.props.numberInPOI !== 'undefined') {
-            number = parseInt(this.props.numberInPOI,10);
-            if(number !== 'NaN') { //We only want numbers
+        if (typeof this.props.numberInPOI !== 'undefined') {
+            number = parseInt(this.props.numberInPOI, 10);
+            if (number !== 'NaN') { //We only want numbers
                 //Styling the number if it's into props
                 //Top
-                var topNumber = Math.round(parseFloat(size*size*0.0316));
+                var topNumber = Math.round(parseFloat(size * size * 0.0316));
                 //Left
                 var leftNumber = '';
                 var str = number.toString();
                 var res = str.match(/1/g);
-                switch(number.toString().length) { // Characters in numberInPOI prop
+                switch (number.toString().length) { // Characters in numberInPOI prop
                     case 1: // For 1 to 9
-                        if(res) leftNumber = "3";
+                        if (res) leftNumber = "3";
                         else leftNumber = "4";
                         break;
                     case 2: // For 10 to 99
-                        if(res) {
-                            switch(res.length) { // Number of 1's found
+                        if (res) {
+                            switch (res.length) { // Number of 1's found
                                 case 2:
                                     leftNumber = "5";
                                     break;
@@ -37,8 +37,8 @@ export default class Poi extends React.Component {
                         else leftNumber = "7";
                         break;
                     case 3: // For 100 to 999
-                        if(res) {
-                            switch(res.length) { // Number of 1's found
+                        if (res) {
+                            switch (res.length) { // Number of 1's found
                                 case 2:
                                     leftNumber = "9";
                                     break;
@@ -52,8 +52,8 @@ export default class Poi extends React.Component {
                         else leftNumber = "11";
                         break;
                     case 4: // For 1000 to 9999
-                        if(res) {
-                            switch(res.length) { // Number of 1's found
+                        if (res) {
+                            switch (res.length) { // Number of 1's found
                                 case 2:
                                     leftNumber = "14";
                                     break;
@@ -88,12 +88,12 @@ export default class Poi extends React.Component {
             border: 1px solid #FFFFFF`
 
         //Polyfill for IE
-        Number.isInteger = Number.isInteger || function(value) {
+        Number.isInteger = Number.isInteger || function (value) {
             return typeof value === "number" &&
-              isFinite(value) &&
-              Math.floor(value) === value;
+                isFinite(value) &&
+                Math.floor(value) === value;
         };
-        if(typeof this.props.numberInPOI !== 'undefined' && Number.isInteger(number)) {
+        if (typeof this.props.numberInPOI !== 'undefined' && Number.isInteger(number)) {
             const numberHtmlStyles = `
                 display: block;
                 font-family: gothamBold;
@@ -107,7 +107,7 @@ export default class Poi extends React.Component {
                 iconAnchor: [0, 24],
                 labelAnchor: [-6, 0],
                 popupAnchor: [0, -36],
-                html: `<span style="${markerHtmlStyles}" ></span><span style="${numberHtmlStyles}">${parseInt(this.props.numberInPOI,10)}</span>`
+                html: `<span style="${markerHtmlStyles}" ></span><span style="${numberHtmlStyles}">${parseInt(this.props.numberInPOI, 10)}</span>`
             });
             return icon;
         }
