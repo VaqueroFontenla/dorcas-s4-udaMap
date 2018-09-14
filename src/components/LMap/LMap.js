@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import { Map, TileLayer, Marker, Popup } from 'react-leaflet';
-// import Poi from '../Poi/Poi';
+import Poi from '../Poi/Poi';
 import { MapStyle } from './styleLMap.js';
 
 class LMap extends Component {
