@@ -1,25 +1,23 @@
 import React, { Component } from 'react';
 import { Map, TileLayer, Marker, Popup } from 'react-leaflet';
-import { MapStyle } from './styleLMap.js';
 import L from 'leaflet';
 
 
 class LMap extends Component {
   constructor(props) {
     super(props);
-    this.state = {
-      lat: 40,
-      lng: -3,
-      zoom: 13,
-    };
   }
+
+
   render() {
-    const position = [this.state.lat, this.state.lng]
+    const MapStyle = this.props.styles;
+    const position = [this.props.coordinates.lat, this.props.coordinates.lon]
+    console.log(MapStyle)
     const iconMarker = new L.Icon({
       iconUrl: require('../../images/poi.png')
     })
     return (
-      <Map style={MapStyle} center={position} zoom={this.state.zoom}>
+      <Map style={MapStyle} center={position} zoom={this.props.coordinates.zoom}>
         <TileLayer
           attribution="&amp;copy <a href=&quot;http://osm.org/copyright&quot;>OpenStreetMap</a> contributors"
           url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
