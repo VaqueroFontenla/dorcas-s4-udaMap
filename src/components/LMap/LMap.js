@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Map, TileLayer, Marker, Popup } from 'react-leaflet';
 import L from 'leaflet';
+import { PopUp } from './styleLMap'
 
 
 class LMap extends Component {
@@ -24,9 +25,11 @@ class LMap extends Component {
         />
         <Marker position={position} icon={iconMarker}>
           <Popup>
-            <span>Dirección<br />
-              <span style={{ display: 'block', textAlign: 'center' }}><b>Precio</b> €</span>
-            </span>
+            <div style={PopUp}>
+              <span>Dirección<br />
+                <span style={{ display: 'block', textAlign: 'center' }}><b>Precio</b> €</span>
+              </span>
+            </div>
           </Popup>
         </Marker>
       </Map>
