@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import LMap from './Components/LMap';
+import LMap from '../LMap/LMap';
 
 
 class UdaMap extends Component {

@@ -1,8 +1,7 @@
 import React, {Component} from 'react';
-import L from 'leaflet';
-import './styleIndex.css';
 import { Map, TileLayer, Marker, Popup } from 'react-leaflet';
-import Poi from './Poi';
+// import Poi from '../Poi/Poi';
+import { MapStyle } from './styleLMap.js';
 
 class LMap extends Component {
   constructor (props) {
@@ -16,7 +15,7 @@ class LMap extends Component {
   render() {
     const position = [this.state.lat, this.state.lng]
     return (
-      <Map className= "MapStyle" center={position} zoom={this.state.zoom}>
+      <Map style= {MapStyle} center={position} zoom={this.state.zoom}>
         <TileLayer
           attribution="&amp;copy <a href=&quot;http://osm.org/copyright&quot;>OpenStreetMap</a> contributors"
           url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"

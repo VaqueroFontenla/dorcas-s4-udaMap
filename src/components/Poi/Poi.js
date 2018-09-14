@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import Poi from '../images/poi.png';
+import Poi from '../../images/poi.png';
 
 
 class Map extends Component {
