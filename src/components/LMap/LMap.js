@@ -6,22 +6,20 @@ import { PopUp, TitlePopup, TextStyle, Operation, TextStyleBold } from './styleL
 
 
 class LMap extends Component {
-  constructor(props) {
-    super(props);
-  }
-
 
   render() {
     const MapStyle = this.props.styles;
     const data = this.props.data;
     const position = [this.props.coordinates.lat, this.props.coordinates.lon]
     console.log(MapStyle)
-    //const iconMarker = new L.Icon({
-      //iconUrl: require('../../images/poi.png')
-   // })
+    const iconMarker = new L.Icon({
+      iconUrl: require('../../images/poi.png'),
+      iconSize: [50, 58],
+      iconAnchor: [25, 50],
+    })
 
     let operation;
-    if(data.operation === 0) {
+    if (data.operation === 0) {
       operation = 'Rent'
     } else if (data.operation === 1) {
       operation = 'Sale'
@@ -35,13 +33,13 @@ class LMap extends Component {
           attribution="&amp;copy <a href=&quot;http://osm.org/copyright&quot;>OpenStreetMap</a> contributors"
           url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
         />
-        <Marker position={position}>
+        <Marker position={position} icon={iconMarker}>
           <Popup>
             <div style={PopUp}>
               <div style={TitlePopup}>
                 <span>Information</span>
               </div>
-              <div style={{display:'flex', flexDirection:'column', justifyContent:'left'}}>
+              <div style={{ display: 'flex', flexDirection: 'column', justifyContent: 'left' }}>
                 <div>
                   <span style={TextStyleBold}>Address:  </span>
                   <span style={TextStyle}>{data.address}</span>
