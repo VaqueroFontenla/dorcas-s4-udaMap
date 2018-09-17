@@ -4,23 +4,22 @@ import L from 'leaflet';
 import { PopUp, TitlePopup, TextStyle, Operation, TextStyleBold } from './styleLMap'
 
 
-class LMap extends Component {
-  constructor(props) {
-    super(props);
-  }
 
+class LMap extends Component {
 
   render() {
     const MapStyle = this.props.styles;
     const data = this.props.data;
     const position = [this.props.coordinates.lat, this.props.coordinates.lon]
     console.log(MapStyle)
-    // const iconMarker = new L.Icon({
-    //   iconUrl: require('../../images/poi.png')
-    // })
+    const iconMarker = new L.Icon({
+      iconUrl: require('../../images/poi.png'),
+      iconSize: [50, 58],
+      iconAnchor: [25, 50],
+    })
 
     let operation;
-    if(data.operation === 0) {
+    if (data.operation === 0) {
       operation = 'Rent'
     } else if (data.operation === 1) {
       operation = 'Sale'
@@ -40,7 +39,7 @@ class LMap extends Component {
               <div style={TitlePopup}>
                 <span>Information</span>
               </div>
-              <div style={{display:'flex', flexDirection:'column', justifyContent:'left'}}>
+              <div style={{ display: 'flex', flexDirection: 'column', justifyContent: 'left' }}>
                 <div>
                   <span style={TextStyleBold}>Address:  </span>
                   <span style={TextStyle}>{data.address}</span>
