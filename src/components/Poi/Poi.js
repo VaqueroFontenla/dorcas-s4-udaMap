@@ -104,6 +104,7 @@ export default class Poi extends React.Component {
 
             const icon = L.divIcon({
                 className: "my-custom-pin",
+                iconSize: [38, 95],
                 iconAnchor: [0, 24],
                 labelAnchor: [-6, 0],
                 popupAnchor: [0, -36],

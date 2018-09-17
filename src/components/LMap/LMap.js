@@ -15,9 +15,9 @@ class LMap extends Component {
     const data = this.props.data;
     const position = [this.props.coordinates.lat, this.props.coordinates.lon]
     console.log(MapStyle)
-    const iconMarker = new L.Icon({
-      iconUrl: require('../../images/poi.png')
-    })
+    // const iconMarker = new L.Icon({
+    //   iconUrl: require('../../images/poi.png')
+    // })
 
     let operation;
     if(data.operation === 0) {
