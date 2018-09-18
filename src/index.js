@@ -11,13 +11,13 @@ const coordinatesPoi = {
 const stylesMap = {
   height: '500px',
   minWidth: '320px',
-  maxWidth:'1440px'
+  maxWidth: '1440px'
 }
 
- const dataPopup = {
-   address: "Calle Almagro, 20, Madrid",
-   operation: 1,
-   uDAVALUE: "932.976"
- }
+const dataPopup = {
+  address: 'Calle Almagro, 20, Madrid',
+  operation: 1,
+  uDAVALUE: 932.976
+}
 
-ReactDOM.render(<UdaMap styles={stylesMap} coordinates={coordinatesPoi} data={dataPopup}/>, document.getElementById('root'));
+ReactDOM.render(<UdaMap styles={stylesMap} coordinates={coordinatesPoi} data={dataPopup} />, document.getElementById('root'));
