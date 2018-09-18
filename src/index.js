@@ -9,11 +9,11 @@ const coordinatesPoi = {
 }
 
 const stylesMap = {
-  minHeight: '225px',
-  maxHeigth:'1020px',
+  height: '500px',
   minWidth: '320px',
   maxWidth:'1440px'
 }
+
  const dataPopup = {
    address: "Calle Almagro, 20, Madrid",
    operation: 1,

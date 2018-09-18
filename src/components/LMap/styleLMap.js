@@ -1,11 +1,4 @@
-const MapStyle = {
-  height: '400px',
-  width: '900px',
-  border: '1px solid black',
-  backgroundColor: 'yellow'
-}
 
-export { MapStyle };
 const PopUp = {
   height:'80px',
   width: '300px',
