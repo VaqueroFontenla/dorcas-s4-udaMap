@@ -58,8 +58,8 @@ The coordinate props are:
 
 ### Tech
 
--Leaflet
--react-leaflet
+- Leaflet
+- react-leaflet
 
 # Authors
 - **Esther Pato** - https://github.com/estherpato 
