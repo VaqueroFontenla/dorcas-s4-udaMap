@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import { Map, TileLayer, Marker, Popup } from 'react-leaflet';
 import L from 'leaflet';
-import { PopUp, TitlePopup, TextStyle, Operation, TextStyleBold, PopUpTxt } from './styleLMap'
+import { PopUp, TitlePopup, TextStyle, Operation, TextStyleBold, PopUpTxt } from './styleLMap';
+import PropTypes from 'prop-types';
 
 
 
@@ -9,9 +10,10 @@ class LMap extends Component {
 
   render() {
     const MapStyle = this.props.styles;
-    const data = this.props.data;
+    const {address,
+           operation,
+           uDAVALUE} = this.props.data;
     const position = [this.props.coordinates.lat, this.props.coordinates.lon]
-    console.log(MapStyle)
     const iconMarker = new L.Icon({
       iconUrl: require('../../../images/poi.png'),
       iconSize: [50, 58],
@@ -42,11 +44,11 @@ class LMap extends Component {
               <div style={PopUpTxt}>
                 <div>
                   <span style={TextStyleBold}>Address:  </span>
-                  <span style={TextStyle}>{data.address}</span>
+                  <span style={TextStyle}>{address}</span>
                 </div>
                 <div>
                   <span style={TextStyleBold}>udaValue:  </span>
-                  <span style={TextStyle}>{data.uDAVALUE}</span>
+                  <span style={TextStyle}>{uDAVALUE}</span>
                   <span style={TextStyleBold}>  €</span>
                 </div>
                 <div>
@@ -60,6 +62,19 @@ class LMap extends Component {
       </Map>
     )
   }
+}
+
+LMap.PropTypes = {
+  address: PropTypes.string,
+  udaValue: PropTypes.number,
+  operation: PropTypes.number,
+  styles: PropTypes.object,
+  position: PropTypes.array,
+  zoom: PropTypes.number,
+  Map: PropTypes.element,
+  TileLayer: PropTypes.element,
+  Mark: PropTypes.element,
+  PopUp: PropTypes.element
 }
 
 export default LMap;
