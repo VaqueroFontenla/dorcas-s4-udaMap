@@ -18,4 +18,7 @@ class UdaMap extends Component {
   }
 }
 
+UdaMap.propTypes = {
+  
+}
 export default UdaMap;

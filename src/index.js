@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import UdaMap from './components/UdaMap/UdaMap';
+import PropTypes from 'prop-types';
 
 const coordinatesPoi = {
   lat: 40.4562923,
