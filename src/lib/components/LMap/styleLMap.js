@@ -12,12 +12,6 @@ const TitlePopup = {
   textAlign: 'center',
 }
 
-const PopUpTxt = {
-  display: 'flex',
-  flexDirection: 'column',
-  justifyContent: 'left'
-}
-
 const TextStyle = {
   fontFamily: 'Gotham-Light, sans serif',
 }
@@ -35,4 +29,4 @@ const Operation = {
   fontWeight: 'bold',
 }
 
-export { PopUp, TitlePopup, TextStyle, TextStyleBold, Operation, PopUpTxt };
+export { PopUp, TitlePopup, TextStyle, TextStyleBold, Operation };
