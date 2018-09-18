@@ -13,7 +13,7 @@ class LMap extends Component {
     const position = [this.props.coordinates.lat, this.props.coordinates.lon]
     console.log(MapStyle)
     const iconMarker = new L.Icon({
-      iconUrl: require('../../images/poi.png'),
+      iconUrl: require('../../../images/poi.png'),
       iconSize: [50, 58],
       iconAnchor: [25, 50],
     })
