@@ -3,7 +3,7 @@
 Map component of Urban Data Analytics.
 You can recieve the coordinates from other UDA's components or external components. Ir shows the address that it recieves from other components with a POI (or Marker) in a map. If you click on the POI it will show you de information of that point.
 
-# Getting Started with Uda Search Box
+# Getting Started with Uda Map
 
 ### Prerrequisites
 
