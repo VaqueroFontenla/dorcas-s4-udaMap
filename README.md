@@ -5,11 +5,11 @@ You can recieve the coordinates from other UDA's components or external componen
 
 # Getting Started with Uda Search Box
 
-###Prerrequisites
+### Prerrequisites
 
 If you want to use udaMap you need to have an user and a password from pulse, the urban data analytic's tool.
 
-###How to install
+### How to install
 
 To start with udaMap, first, you have to install the npm package.
 
@@ -54,7 +54,8 @@ The coordinate props are:
 - You can configurate the operation that you want to show in the pop up with sale or rent.
 - In this version the props that come from an API are hardcoded
 
-#Techs
+### Tech
+
 -Leaflet
 -react-leaflet
 
