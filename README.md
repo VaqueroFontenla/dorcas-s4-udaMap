@@ -21,7 +21,9 @@ $ npm install --¿Uda Map
 
 The props you can configurate are the following ones:
 
-(Props for the map's size)
+Props for the map's size
+
+
 | Prop | type | description |
 | ------ | ------ | ------ |
 | height | string | map's height |
