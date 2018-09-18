@@ -1,12 +1,12 @@
 {
   "name": "uda",
   "version": "0.1.0",
-  "main": "src/index.js",
+  "main": "dist/index.js",
   "module": "dist/index.js",
   "files": ["dist", "README.md"],
   "repository": {
     "type": "git",
-    "url": "https://urbandataanalytics.github.io/udaMap/"
+    "url": "https://github.com/urbandataanalytics/udaMap.git"
   },
   "scripts": {
     "start": "react-scripts start",
