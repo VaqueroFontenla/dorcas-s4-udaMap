@@ -15,9 +15,9 @@ const stylesMap = {
 }
 
  const dataPopup = {
-   address: "Calle Almagro, 20, Madrid",
+   address: 'Calle Almagro, 20, Madrid',
    operation: 1,
-   uDAVALUE: "932.976"
+   uDAVALUE: 932.976
  }
 
 ReactDOM.render(<UdaMap styles={stylesMap} coordinates={coordinatesPoi} data={dataPopup}/>, document.getElementById('root'));
