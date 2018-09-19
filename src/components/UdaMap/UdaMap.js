@@ -8,11 +8,17 @@ class UdaMap extends Component {
   }
 
   render() {
-    const { styles, coordinates, data } = this.props;
+    const {
+      styles,
+      coordinates,
+      data } = this.props;
 
     return (
       <div>
-        <LMap styles={styles} coordinates={coordinates} data={data}/>
+        <LMap
+          styles={styles}
+          coordinates={coordinates}
+          data={data} />
       </div>
     );
   }

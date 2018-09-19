@@ -33,25 +33,43 @@ class LMap extends Component {
           attribution="&amp;copy <a href=&quot;http://osm.org/copyright&quot;>OpenStreetMap</a> contributors"
           url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
         />
-        <Marker position={position} icon={iconMarker}>
+        <Marker
+          position={position}
+          icon={iconMarker}>
           <Popup>
             <div style={PopUp}>
               <div style={TitlePopup}>
-                <span>Information</span>
+                <span>
+                  Information
+                </span>
               </div>
               <div style={{ display: 'flex', flexDirection: 'column', justifyContent: 'left' }}>
                 <div>
-                  <span style={TextStyleBold}>Address:  </span>
-                  <span style={TextStyle}>{data.address}</span>
+                  <span style={TextStyleBold}>
+                    Address:
+                  </span>
+                  <span style={TextStyle}>
+                    {data.address}
+                  </span>
                 </div>
                 <div>
-                  <span style={TextStyleBold}>udaValue:  </span>
-                  <span style={TextStyle}>{data.uDAVALUE}</span>
-                  <span style={TextStyleBold}>  €</span>
+                  <span style={TextStyleBold}>
+                    udaValue:
+                  </span>
+                  <span style={TextStyle}>
+                    {data.uDAVALUE}
+                  </span>
+                  <span style={TextStyleBold}>
+                    €
+                  </span>
                 </div>
                 <div>
-                  <span style={TextStyleBold}>Operation:  </span>
-                  <span style={Operation}>{operation}</span>
+                  <span style={TextStyleBold}>
+                    Operation:
+                  </span>
+                  <span style={Operation}>
+                    {operation}
+                  </span>
                 </div>
               </div>
             </div>
