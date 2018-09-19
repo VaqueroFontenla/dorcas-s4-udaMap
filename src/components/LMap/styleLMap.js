@@ -20,12 +20,14 @@ const PopUpTxt = {
 
 const TextStyle = {
   fontFamily: 'Gotham-Light, sans serif',
+  marginLeft: '5px'
 }
 
 const TextStyleBold = {
   fontFamily: 'Gotham-Bold, sans serif',
   fontWeight: 'bold',
   color: '#07090D',
+  marginLeft: '5px'
 }
 
 const Operation = {
