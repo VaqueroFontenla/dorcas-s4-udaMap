@@ -1,12 +1,12 @@
 
 const PopUp = {
-  height:'80px',
+  height: '80px',
   width: '300px',
   color: '#07090D',
 }
 
 const TitlePopup = {
-  margin:'10px',
+  margin: '10px',
   width: '100%',
   fontFamily: 'Gotham-Bold, sans serif',
   textAlign: 'center',
