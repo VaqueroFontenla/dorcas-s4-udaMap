@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import UdaMap from './lib/components/UdaMap/UdaMap';
+import UdaMap from './components/UdaMap/UdaMap';
 
 const coordinatesPoi = {
   lat: 40.4562923,
@@ -21,3 +21,5 @@ const dataPopup = {
 }
 
 ReactDOM.render(<UdaMap styles={stylesMap} coordinates={coordinatesPoi} data={dataPopup} />, document.getElementById('root'));
+
+import UdaMap from './lib/components/UdaMap/UdaMap.js';
