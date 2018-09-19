@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import LMap from '../LMap/LMap';
 
-
 class UdaMap extends Component {
   constructor(props) {
     super(props);
