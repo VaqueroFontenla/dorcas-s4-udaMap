@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import LMap from '../LMap/LMap';
 
-
 class UdaMap extends Component {
   constructor(props) {
     super(props);
@@ -12,7 +11,7 @@ class UdaMap extends Component {
 
     return (
       <div>
-        <LMap styles={styles} coordinates={coordinates} data={data}/>
+        <LMap styles={styles} coordinates={coordinates} data={data} />
       </div>
     );
   }
