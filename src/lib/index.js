@@ -1,3 +1,3 @@
-import UdaMap from './lib/components/UdaMap/UdaMap.js'
+import UdaMap from './components/UdaMap/UdaMap.js'
 
-export defaul UdaMap;
+export default UdaMap;
