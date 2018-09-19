@@ -9,14 +9,6 @@ You can recieve the coordinates from other UDA's components or external componen
 
 If you want to use udaMap you need to have an user and a password from pulse, the urban data analytic's tool.
 
-### How to install
-
-To start with udaMap, first, you have to install the npm package.
-
-```sh
-$ npm install --¿Uda Map
-```
-
 # Props from UDA
 
 The props you can configurate are the following ones:
