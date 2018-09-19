@@ -1,33 +1,20 @@
 {
-  "name": "uda-map",
-  "version": "0.1.6",
-  "main": "dist/index.js",
-  "module": "dist/index.js",
-  "files": ["dist", "README.md","LICENSE", "CODE-OF-CONDUCT"],
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/urbandataanalytics/udaMap.git"
-  },
-
+  "name": "uda",
+  "version": "0.1.0",
+  "private": true,
   "dependencies": {
     "leaflet": "^1.3.4",
     "prop-types": "^15.6.2",
-    "react-leaflet": "^2.0.1"
-  },
-
-  "devDependencies": {
-    "babel-cli": "^6.26.0",
     "react": "^16.4.2",
     "react-dom": "^16.4.2",
+    "react-leaflet": "^2.0.1",
     "react-scripts": "1.1.5"
   },
-
   "scripts": {
     "start": "react-scripts start",
-    "build": "rm -rf dist && NODE_ENV=production babel src/lib --out-dir dist --copy-files",
+    "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
   },
-
   "homepage": "./"
 }
