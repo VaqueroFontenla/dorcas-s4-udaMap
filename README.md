@@ -46,10 +46,6 @@ The coordinate props are:
 | lon | number | longitude |
 | zoom | number | zoom of the map |
 
-# How to use it
-
-**nada porque no hay npm todavía**
-
 # Interesting Data
 
 - If you want to, you can install the udaReport package to have a more complete experience (Link del paquete npm). 
