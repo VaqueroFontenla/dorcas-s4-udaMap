@@ -21,5 +21,3 @@ const dataPopup = {
 }
 
 ReactDOM.render(<UdaMap styles={stylesMap} coordinates={coordinatesPoi} data={dataPopup} />, document.getElementById('root'));
-
-import UdaMap from './lib/components/UdaMap/UdaMap.js';
